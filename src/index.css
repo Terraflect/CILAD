@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-heritage-bg: #f4f1ea;
+  --color-heritage-surface: #ffffff;
+  --color-heritage-navy: #001f3f;
+  --color-heritage-accent: #b08d57;
+  --color-heritage-text: #1a1a1a;
+  --color-heritage-muted: #595959;
+  
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-heritage-bg text-heritage-text font-serif antialiased selection:bg-heritage-navy selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-heritage-navy;
+  }
+}
+
+@layer components {
+  .hairline {
+    @apply h-[1px] bg-heritage-navy/20 w-full;
+  }
+  .thick-line {
+    @apply h-[3px] bg-heritage-navy w-full;
+  }
+  .double-line {
+    @apply border-t-[3px] border-b border-heritage-navy py-1;
+  }
+  .eyebrow {
+    @apply font-sans text-[10px] uppercase tracking-[0.25em] font-bold text-heritage-accent;
+  }
+  .nav-link {
+    @apply text-base italic text-heritage-bg/80 hover:text-white transition-colors;
+  }
+  .cta-button {
+    @apply inline-flex items-center justify-center bg-heritage-navy text-white px-8 py-3 text-[11px] font-sans uppercase tracking-[0.2em] font-bold hover:bg-heritage-accent transition-all duration-300;
+  }
+  .ghost-button {
+    @apply inline-flex items-center justify-center px-8 py-3 text-[11px] font-sans uppercase tracking-[0.2em] font-bold text-heritage-navy border border-heritage-navy hover:bg-heritage-navy hover:text-white transition-all duration-300;
+  }
+  .drop-cap::first-letter {
+    float: left;
+    font-size: 4.5em;
+    line-height: 0.8;
+    margin-right: 0.1em;
+    margin-top: 0.05em;
+    color: var(--color-heritage-navy);
+    font-weight: 600;
+  }
+}
