@@ -38,7 +38,7 @@ export function Footer() {
             <h3 className="font-sans text-[10px] uppercase tracking-[0.2em] font-bold text-heritage-accent">Academics</h3>
             <ul className="space-y-4">
               <li><Link to="/coming-soon" className="font-serif text-white/70 hover:text-white transition-colors">Research Programmes</Link></li>
-              <li><Link to="/coming-soon" className="font-serif text-white/70 hover:text-white transition-colors">Publications & Journals</Link></li>
+              <li><Link to="/cilad-monthly" className="font-serif text-white/70 hover:text-white transition-colors">CILAD Monthly</Link></li>
               <li><Link to="/coming-soon" className="font-serif text-white/70 hover:text-white transition-colors">Events & Symposia</Link></li>
               <li><Link to="/coming-soon" className="font-serif text-white/70 hover:text-white transition-colors">Visiting Scholars</Link></li>
             </ul>
@@ -51,8 +51,8 @@ export function Footer() {
               Andhra Pradesh 531035, India
             </p>
             <div className="flex flex-col space-y-4">
-              <a href="mailto:info@cilad.dsnlu.ac.in" className="inline-block border-b border-heritage-accent font-serif italic text-white hover:text-heritage-accent transition-colors pb-0.5 w-fit">
-                info@cilad.dsnlu.ac.in
+              <a href="mailto:cilad@dsnlu.ac.in" className="inline-block border-b border-heritage-accent font-serif italic text-white hover:text-heritage-accent transition-colors pb-0.5 w-fit">
+                cilad@dsnlu.ac.in
               </a>
               <div className="flex gap-4 pt-2">
                 <a href="https://www.linkedin.com/in/centre-for-international-law-and-allied-disciplines-60462a31a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWskOdnQRTBa2FSEGCO5j7A%3D%3D" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-heritage-accent transition-colors">

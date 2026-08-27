@@ -1,6 +1,5 @@
-import { ArrowRight, BookOpen, Landmark, FileText, Globe, Scale, Leaf, Shield, Heart, Ship, Gavel } from "lucide-react";
+import { ArrowRight, BookOpen, Landmark, FileText, Globe, Scale, Leaf, Shield, Heart, Ship, Gavel, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import { DsnluLogo, CiladLogo } from "../components/Logos";
 
 export function Home() {
   return (
@@ -13,18 +12,7 @@ export function Home() {
         </div>
 
         {/* Hero Section */}
-        <section className="px-6 py-16 lg:py-24 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
-          {/* Dual Logos (1st DSNLU, 2nd CILAD) */}
-          <div className="flex items-center justify-center gap-6 md:gap-8 mb-10">
-            <div className="flex flex-col items-center gap-2 group">
-              <DsnluLogo className="w-20 h-20 md:w-24 md:h-24 drop-shadow-lg transition-transform group-hover:scale-105" />
-            </div>
-            <div className="w-[1.5px] h-16 bg-heritage-navy/20"></div>
-            <div className="flex flex-col items-center gap-2 group">
-              <CiladLogo className="w-20 h-20 md:w-24 md:h-24 rounded-full ring-2 ring-heritage-accent/50 drop-shadow-lg transition-transform group-hover:scale-105" />
-            </div>
-          </div>
-
+        <section className="px-6 py-20 lg:py-28 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
           <div className="mb-10 flex flex-col items-center w-full">
             <span className="eyebrow mb-4 text-heritage-accent">A Research Centre Of</span>
             <h2 className="font-serif text-xl md:text-2xl tracking-widest uppercase text-heritage-navy mb-8">
@@ -154,6 +142,87 @@ export function Home() {
                 <h4 className="font-serif text-2xl text-heritage-navy mb-4">Prof. (Dr.) D. Surya Prakasa Rao</h4>
                 <p className="font-serif text-sm text-heritage-muted italic">Vice Chancellor, DSNLU</p>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* CILAD Monthly Section */}
+        <section className="bg-heritage-surface border-y border-heritage-navy/20 px-6 py-24 w-full">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+              <div className="w-full lg:w-3/5 space-y-6 text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start gap-4">
+                  <div className="h-[1px] w-8 bg-heritage-accent/60"></div>
+                  <span className="font-sans text-[11px] uppercase tracking-[0.25em] font-bold text-heritage-accent">
+                    Centre Periodical
+                  </span>
+                </div>
+                
+                <h2 className="font-serif text-4xl md:text-5xl text-heritage-navy leading-tight">
+                  CILAD Monthly
+                </h2>
+                
+                <p className="font-serif italic text-xl md:text-2xl text-heritage-muted leading-relaxed">
+                  A monthly analytical bulletin covering critical developments in international jurisprudence, state treaties, and emerging global legal doctrines.
+                </p>
+                
+                <p className="font-sans text-heritage-muted/90 text-base leading-relaxed">
+                  Published under the aegis of the Centre for International Law and Allied Disciplines at DSNLU, CILAD Monthly features expert commentaries, landmark case briefs from international tribunals, and contributions from leading legal scholars and student researchers.
+                </p>
+
+                <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                  <Link
+                    to="/cilad-monthly"
+                    className="inline-flex items-center gap-2 px-8 py-3.5 bg-heritage-navy text-white font-sans text-xs uppercase tracking-widest font-bold hover:bg-heritage-accent transition-colors shadow-sm"
+                  >
+                    <span>Read CILAD Monthly</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+
+                  <a
+                    href="https://dsnlu.ac.in/centre-for-international-law-and-allied-disciplines-cilad/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-3.5 border border-heritage-navy text-heritage-navy font-sans text-xs uppercase tracking-widest font-bold hover:bg-heritage-navy hover:text-white transition-colors"
+                  >
+                    <span>View On DSNLU Portal</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Visual Card / Highlights */}
+              <div className="w-full lg:w-2/5">
+                <div className="bg-white border border-heritage-navy/15 p-8 md:p-10 shadow-lg relative">
+                  <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2 bg-heritage-accent text-white px-3 py-1 font-sans text-[9px] uppercase tracking-widest font-bold">
+                    Latest Issues
+                  </div>
+                  <div className="w-12 h-12 rounded bg-heritage-navy/5 flex items-center justify-center text-heritage-accent mb-6">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif text-2xl text-heritage-navy mb-3">Digest & Commentary</h3>
+                  <ul className="space-y-3 font-sans text-sm text-heritage-muted border-t border-heritage-navy/10 pt-4 mb-6">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-heritage-accent"></span>
+                      International Tribunal Case Summaries
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-heritage-accent"></span>
+                      Global Treaty & Policy Analysis
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-heritage-accent"></span>
+                      Peer Review Columns & Op-Eds
+                    </li>
+                  </ul>
+                  <Link
+                    to="/cilad-monthly"
+                    className="inline-block text-xs font-sans uppercase tracking-widest font-bold text-heritage-accent hover:underline"
+                  >
+                    Explore Archive & Submissions &rarr;
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>

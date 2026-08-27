@@ -8,7 +8,14 @@ export function Header() {
       {/* Top Utility Bar */}
       <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-2 flex justify-between items-center text-[9px] font-sans tracking-[0.2em] uppercase text-white/70">
-          <div>Damodaram Sanjivayya National Law University</div>
+          <a
+            href="https://dsnlu.ac.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            Damodaram Sanjivayya National Law University
+          </a>
           <div className="hidden md:flex gap-6">
             <Link to="/coming-soon" className="hover:text-white transition-colors">Alumni</Link>
             <Link to="/coming-soon" className="hover:text-white transition-colors">Library</Link>
@@ -39,7 +46,7 @@ export function Header() {
         <nav className="hidden md:flex gap-8 lg:gap-10 items-center">
           <Link to="/coming-soon" className="nav-link">The Centre</Link>
           <Link to="/coming-soon" className="nav-link">Research & Impact</Link>
-          <Link to="/coming-soon" className="nav-link">Publications</Link>
+          <Link to="/cilad-monthly" className="nav-link">CILAD Monthly</Link>
           <Link to="/coming-soon" className="nav-link">Fellowships</Link>
         </nav>
 

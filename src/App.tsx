@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
 import { ComingSoon } from "./pages/ComingSoon";
+import { CiladMonthly } from "./pages/CiladMonthly";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/cilad-monthly" element={<CiladMonthly />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
