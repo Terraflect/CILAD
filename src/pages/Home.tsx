@@ -4,13 +4,6 @@ import { Link } from "react-router-dom";
 export function Home() {
   return (
     <main className="flex-grow">
-        {/* Event Banner */}
-        <div className="bg-heritage-navy text-white text-center py-3 border-b border-heritage-accent">
-          <p className="font-sans text-[10px] uppercase tracking-[0.2em] font-bold">
-            <span className="text-heritage-accent">Upcoming Workshop:</span> Beyond Borders 2.0 • August 31, 2026 • Hybrid
-          </p>
-        </div>
-
         {/* Hero Section */}
         <section className="px-6 py-20 lg:py-28 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
           <div className="mb-10 flex flex-col items-center w-full">
@@ -35,21 +28,21 @@ export function Home() {
         </section>
 
         {/* Highlighted Event Section */}
-        <section id="upcoming-event" className="bg-heritage-surface border-y border-heritage-navy/20">
+        <section id="event-highlights" className="bg-heritage-surface border-y border-heritage-navy/20">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
              <div className="w-full lg:w-1/2 p-12 lg:p-24 flex flex-col justify-center border-r border-heritage-navy/20">
                <div className="flex flex-wrap items-center gap-3 mb-6">
-                 <span className="bg-heritage-navy text-white px-3 py-1 font-sans text-[10px] uppercase tracking-[0.2em] font-bold">Upcoming Event</span>
+                 <span className="bg-heritage-navy text-white px-3 py-1 font-sans text-[10px] uppercase tracking-[0.2em] font-bold">Event Concluded</span>
                  <span className="font-sans text-[10px] uppercase tracking-[0.2em] font-bold text-heritage-accent">International Workshop</span>
                </div>
                <h2 className="font-serif text-4xl md:text-5xl text-heritage-navy leading-tight mb-8">Beyond Borders 2.0: Careers and Trends in International Law</h2>
                <p className="font-serif text-lg text-heritage-muted leading-relaxed mb-8">
-                 Providing students and professionals with insights into career opportunities in international law, developments in international trade law, and contemporary issues in International Humanitarian Law.
+                 The workshop concluded successfully on August 31, 2026, providing students and professionals with profound insights into career opportunities, developments in international trade law, and contemporary issues in International Humanitarian Law.
                </p>
                <div className="space-y-4 mb-12">
                  <div className="flex items-center gap-4 border-b border-heritage-navy/10 pb-4">
                    <div className="w-24 font-sans text-[10px] uppercase tracking-widest font-bold text-heritage-accent">Date</div>
-                   <div className="font-serif text-lg text-heritage-navy">31 August 2026</div>
+                   <div className="font-serif text-lg text-heritage-navy">31 August 2026 (Concluded)</div>
                  </div>
                  <div className="flex items-center gap-4 border-b border-heritage-navy/10 pb-4">
                    <div className="w-24 font-sans text-[10px] uppercase tracking-widest font-bold text-heritage-accent">Mode</div>
@@ -61,7 +54,10 @@ export function Home() {
                  </div>
                </div>
                <div>
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScdyoN2Jtt2S9nAOK6_Dw3hzTE43_lCjMi-H7shz3CgCDAd8w/viewform" target="_blank" rel="noopener noreferrer" className="cta-button">Register Now</a>
+                  <Link to="/coming-soon" className="cta-button inline-flex items-center gap-2">
+                    <span>View Workshop Proceedings & Highlights</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                </div>
              </div>
              <div className="w-full lg:w-1/2 p-12 lg:p-24 bg-heritage-navy text-white flex flex-col justify-center">
@@ -300,38 +296,6 @@ export function Home() {
 
           </div>
         </section>
-
-        {/* Registration Details */}
-        <section className="px-6 py-24 text-center">
-           <h2 className="font-serif text-4xl text-heritage-navy mb-4">Join The Workshop</h2>
-           <p className="font-serif text-lg text-heritage-muted italic mb-12">Participants who attend all sessions are eligible for the Workshop e-certificate.</p>
-           
-           <div className="inline-block border-2 border-heritage-accent p-8 md:p-12 bg-heritage-surface relative">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-heritage-bg px-4 font-sans text-[10px] uppercase tracking-[0.2em] font-bold text-heritage-accent">
-                Registration Closes
-              </div>
-              <div className="font-serif text-3xl md:text-4xl text-heritage-navy mb-2">29th August, 2026</div>
-              <div className="font-sans text-[12px] uppercase tracking-widest text-heritage-muted font-bold mb-8">at 23:59 Hrs</div>
-              
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScdyoN2Jtt2S9nAOK6_Dw3hzTE43_lCjMi-H7shz3CgCDAd8w/viewform" target="_blank" rel="noopener noreferrer" className="cta-button text-sm px-12 py-4">Click Here To Register</a>
-           </div>
-        </section>
-
-        {/* Floating Action Button */}
-        <button
-          onClick={() => {
-            document.getElementById('upcoming-event')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="fixed bottom-8 right-8 z-50 bg-heritage-navy text-white pl-6 pr-4 py-3 rounded-full shadow-2xl flex items-center gap-4 hover:bg-heritage-accent transition-all duration-300 group border border-white/10"
-        >
-          <div className="flex flex-col items-start text-left">
-            <span className="font-sans text-[8px] uppercase tracking-[0.2em] text-white/70 group-hover:text-white/90">Upcoming Event</span>
-            <span className="font-serif text-[15px] leading-tight mt-0.5">Beyond Borders 2.0</span>
-          </div>
-          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
-            <ArrowRight className="w-4 h-4 text-white" />
-          </div>
-        </button>
       </main>
   );
 }
